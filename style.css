@@ -89,10 +89,11 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   justify-content: space-between;
   gap: 24px;
 }
-.logo { display: flex; flex-direction: column; line-height: 1.1; color: #fff; transition: color 0.35s ease; }
-.site-header.scrolled .logo { color: var(--color-ink); }
-.logo-main { font-family: var(--font-en); font-size: 20px; letter-spacing: 0.14em; font-weight: 600; }
-.logo-sub { font-family: var(--font-en); font-size: 9px; letter-spacing: 0.32em; opacity: 0.8; }
+.logo { display: flex; align-items: center; }
+.logo-img { display: block; height: 34px; width: auto; }
+.logo-img-dark { display: none; }
+.site-header.scrolled .logo-img-white { display: none; }
+.site-header.scrolled .logo-img-dark { display: block; }
 
 .nav { display: flex; gap: 34px; font-size: 12.5px; letter-spacing: 0.1em; color: #fff; transition: color 0.35s ease; }
 .site-header.scrolled .nav { color: var(--color-ink); }
@@ -444,7 +445,6 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 /* ---------- Footer ---------- */
 .site-footer { background: var(--color-dark); color: var(--color-cream); padding: 56px 24px 26px; }
 .footer-inner { max-width: 1180px; margin: 0 auto; display: flex; flex-wrap: wrap; gap: 28px; align-items: center; justify-content: space-between; }
-.logo-footer { color: var(--color-cream); }
 .footer-nav { display: flex; gap: 26px; font-size: 12px; letter-spacing: 0.08em; color: rgba(250,247,241,0.75); flex-wrap: wrap; }
 .footer-social { display: flex; gap: 18px; font-size: 11px; letter-spacing: 0.1em; color: rgba(250,247,241,0.75); }
 .footer-copy { text-align: center; margin-top: 40px; font-size: 11px; color: rgba(250,247,241,0.4); letter-spacing: 0.05em; }
