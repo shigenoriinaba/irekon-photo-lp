@@ -240,6 +240,41 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 .scroll-line { width: 1px; height: 46px; background: rgba(255,255,255,0.6); }
 .scroll-text { font-family: var(--font-en); font-size: 10px; letter-spacing: 0.3em; writing-mode: vertical-rl; }
 
+/* ---------- Hero thumbnail nav ---------- */
+.hero-thumbs {
+  position: absolute;
+  right: 40px; bottom: 40px;
+  z-index: 3;
+  display: flex;
+  gap: 8px;
+}
+.hero-thumb {
+  width: 56px;
+  height: 40px;
+  border-radius: 4px;
+  border: 2px solid rgba(255,255,255,0.35);
+  background-size: cover;
+  background-position: center;
+  cursor: pointer;
+  padding: 0;
+  opacity: 0.65;
+  transform: scale(0.94);
+  transition: opacity 0.35s ease, transform 0.35s ease, border-color 0.35s ease;
+}
+.hero-thumb:hover { opacity: 0.9; }
+.hero-thumb.active {
+  opacity: 1;
+  transform: scale(1);
+  border-color: #fff;
+}
+@media (max-width: 720px) {
+  .hero-thumbs { right: 24px; bottom: 24px; gap: 6px; }
+  .hero-thumb { width: 42px; height: 32px; }
+}
+@media (max-height: 700px) {
+  .hero-thumbs { bottom: 20px; }
+}
+
 @media (max-width: 720px) {
   .hero-content { padding: 100px 24px 64px; }
   .scroll-hint { display: none; }
