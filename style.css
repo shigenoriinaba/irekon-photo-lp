@@ -139,21 +139,21 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   background-position: center;
   opacity: 0;
   transition: opacity 1.4s ease;
+  animation: heroKenBurns 22s ease-in-out infinite alternate;
+  will-change: opacity, transform;
+  backface-visibility: hidden;
 }
-.hero-slide.active {
-  opacity: 1;
-  animation: heroKenBurns 5.5s ease-out forwards;
-}
+.hero-slide.active { opacity: 1; }
 .hero-slide-1 { background-image: url("images/photo-hero-1.jpg"); }
-.hero-slide-2 { background-image: url("images/photo-hero-2.jpg"); }
-.hero-slide-3 { background-image: url("images/photo-hero-3.jpg"); }
-.hero-slide-4 { background-image: url("images/photo-hero-4.jpg"); }
+.hero-slide-2 { background-image: url("images/photo-hero-2.jpg"); animation-delay: -5.5s; }
+.hero-slide-3 { background-image: url("images/photo-hero-3.jpg"); animation-delay: -11s; }
+.hero-slide-4 { background-image: url("images/photo-hero-4.jpg"); animation-delay: -16.5s; }
 @keyframes heroKenBurns {
   from { transform: scale(1); }
   to { transform: scale(1.08); }
 }
 @media (prefers-reduced-motion: reduce) {
-  .hero-slide.active { animation: none; }
+  .hero-slide { animation: none; }
 }
 .hero-overlay {
   position: absolute; inset: 0;
