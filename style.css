@@ -340,6 +340,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   padding: 56px 40px;
 }
 .plan-name { font-family: var(--font-en); font-size: 15px; letter-spacing: 0.2em; color: var(--color-gold); margin-bottom: 18px; }
+.plan-original { font-size: 13px; letter-spacing: 0.05em; color: rgba(250,247,241,0.55); text-decoration: line-through; margin-bottom: 6px; }
 .plan-price { font-family: var(--font-en); font-size: clamp(44px, 7vw, 60px); letter-spacing: 0.02em; }
 .plan-price span { font-size: 16px; letter-spacing: 0.05em; margin-left: 6px; font-family: var(--font-sans-jp); opacity: 0.8; }
 .plan-price small { font-size: 14px; opacity: 0.6; }
