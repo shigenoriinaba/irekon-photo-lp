@@ -8,13 +8,34 @@ onScroll();
 window.addEventListener('scroll', onScroll);
 
 // Mobile nav toggle
+// Body scroll is locked while the drawer is open — on iOS Safari, scrolling
+// the page behind a fixed+transformed nav panel causes it to detach/ghost.
 const hamburger = document.getElementById('hamburger');
 const nav = document.getElementById('mainNav');
+let lockedScrollY = 0;
+
+const openNav = () => {
+  lockedScrollY = window.scrollY;
+  document.body.style.position = 'fixed';
+  document.body.style.top = `-${lockedScrollY}px`;
+  document.body.style.width = '100%';
+  nav.classList.add('open');
+};
+
+const closeNav = () => {
+  nav.classList.remove('open');
+  document.body.style.position = '';
+  document.body.style.top = '';
+  document.body.style.width = '';
+  window.scrollTo(0, lockedScrollY);
+};
+
 hamburger.addEventListener('click', () => {
-  nav.classList.toggle('open');
+  if (nav.classList.contains('open')) closeNav();
+  else openNav();
 });
 nav.querySelectorAll('a').forEach((a) => {
-  a.addEventListener('click', () => nav.classList.remove('open'));
+  a.addEventListener('click', closeNav);
 });
 
 // Hero slideshow (4 photos, crossfade + Ken Burns zoom on each change)
