@@ -366,6 +366,10 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 .plan-note { margin-top: 36px; font-size: 12.5px; color: rgba(250,247,241,0.55); line-height: 1.9; }
 .plan-card .btn-line { margin-top: 40px; }
 
+/* ---------- Plan photo break ---------- */
+.plan-photo { position: relative; height: 46vh; min-height: 300px; overflow: hidden; }
+.plan-photo .plan-photo-img { position: absolute; inset: 0; }
+
 /* ---------- Flow ---------- */
 .flow { max-width: var(--max-width); margin: 0 auto; }
 .flow-grid {
@@ -468,6 +472,14 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 
 /* ---------- Access ---------- */
 .access { max-width: var(--max-width); margin: 0 auto; }
+.access-photo-img {
+  aspect-ratio: 21 / 9;
+  border-radius: 4px;
+  margin-bottom: 48px;
+}
+@media (max-width: 720px) {
+  .access-photo-img { aspect-ratio: 4 / 3; margin-bottom: 36px; }
+}
 .access-grid {
   display: grid;
   grid-template-columns: 0.85fr 1.15fr;
@@ -562,9 +574,13 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 
 .ph-studio { background-image: url("images/photo-concept.jpg"); background-size: cover; background-position: center; }
 .ph-final  { background: linear-gradient(160deg, #f0c07e 0%, #d97e52 35%, #6c5a4a 65%, #263a2c 100%); }
+.plan-photo-img { background-image: url("images/photo-plan-break.jpg"); background-size: cover; background-position: center; }
+.access-photo-img { background-image: url("images/photo-studio-exterior.jpg"); background-size: cover; background-position: center; }
 
 /* 実写差し替え済み：プレースホルダーの点柄と「REPLACE IMAGE」表示を消す */
 .ph-studio::before, .ph-studio::after,
+.plan-photo-img::before, .plan-photo-img::after,
+.access-photo-img::before, .access-photo-img::after,
 .ph-g1::before, .ph-g1::after { content: none; }
 
 .ph-g1  { background-image: url("images/photo-gallery-1.jpg"); background-size: cover; background-position: center; }
