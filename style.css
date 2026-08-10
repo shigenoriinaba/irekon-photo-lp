@@ -490,15 +490,24 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 .ph-g1::before, .ph-g1::after { content: none; }
 
 .ph-g1  { background-image: url("images/photo-gallery-1.jpg"); background-size: cover; background-position: center; }
-.ph-g2  { background: linear-gradient(150deg,#d8c9a3,#6e5a3c); }
-.ph-g3  { background: linear-gradient(150deg,#e6bd7e,#384a34); }
-.ph-g4  { background: linear-gradient(150deg,#a98f63,#6e5a3c); }
-.ph-g5  { background: linear-gradient(150deg,#f2c98a,#7a4a4a); }
-.ph-g6  { background: linear-gradient(150deg,#cdb88f,#55432e); }
-.ph-g7  { background: linear-gradient(150deg,#e0895a,#263a2c); }
-.ph-g8  { background: linear-gradient(150deg,#d98f5a,#4a5a4a); }
-.ph-g9  { background: linear-gradient(150deg,#e6d8bd,#8a7256); }
+.ph-g2  { background-image: url("images/photo-gallery-2.jpg"); background-size: cover; background-position: center; }
+.ph-g3  { background-image: url("images/photo-gallery-3.jpg"); background-size: cover; background-position: center; }
+.ph-g4  { background-image: url("images/photo-gallery-4.jpg"); background-size: cover; background-position: center; }
+.ph-g5  { background-image: url("images/photo-gallery-5.jpg"); background-size: cover; background-position: center; }
+.ph-g6  { background-image: url("images/photo-gallery-6.jpg"); background-size: cover; background-position: center; }
+.ph-g7  { background-image: url("images/photo-gallery-7.jpg"); background-size: cover; background-position: center; }
+.ph-g8  { background-image: url("images/photo-gallery-8.jpg"); background-size: cover; background-position: center; }
+.ph-g9  { background-image: url("images/photo-gallery-9.jpg"); background-size: cover; background-position: center; }
 .ph-g10 { background: linear-gradient(150deg,#f3c988,#52664a); }
+
+.ph-g2::before, .ph-g2::after,
+.ph-g3::before, .ph-g3::after,
+.ph-g4::before, .ph-g4::after,
+.ph-g5::before, .ph-g5::after,
+.ph-g6::before, .ph-g6::after,
+.ph-g7::before, .ph-g7::after,
+.ph-g8::before, .ph-g8::after,
+.ph-g9::before, .ph-g9::after { content: none; }
 
 .ph-voice1 { background: linear-gradient(150deg,#e6bd7e,#8a7256); }
 .ph-voice2 { background: linear-gradient(150deg,#cdb88f,#55432e); }
