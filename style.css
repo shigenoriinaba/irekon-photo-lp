@@ -518,6 +518,46 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   .access-map { order: -1; aspect-ratio: 16 / 11; }
 }
 
+/* ---------- Inquiry form ---------- */
+.inquiry { max-width: 640px; margin: 0 auto; }
+.inquiry-lead { text-align: center; font-size: 14.5px; color: var(--color-ink-soft); margin-bottom: 44px; }
+.inquiry-form { display: grid; gap: 22px; }
+.inquiry-row { display: grid; gap: 8px; }
+.inquiry-row label { font-size: 13.5px; letter-spacing: 0.05em; color: var(--color-ink); }
+.inquiry-row .req {
+  margin-left: 6px;
+  font-size: 10px;
+  letter-spacing: 0.05em;
+  color: var(--color-gold);
+  border: 1px solid var(--color-gold);
+  border-radius: 3px;
+  padding: 1px 6px;
+  vertical-align: middle;
+}
+.inquiry-row input,
+.inquiry-row textarea {
+  width: 100%;
+  padding: 12px 14px;
+  border: 1px solid var(--color-line);
+  border-radius: 4px;
+  background: var(--color-cream);
+  color: var(--color-ink);
+  font-family: var(--font-sans-jp);
+  font-size: 14.5px;
+  resize: vertical;
+}
+.inquiry-row input:focus,
+.inquiry-row textarea:focus {
+  outline: none;
+  border-color: var(--color-accent);
+}
+.inquiry-form .btn-line {
+  justify-self: center;
+  margin-top: 10px;
+  border: none;
+  cursor: pointer;
+}
+
 /* ---------- Final CTA ---------- */
 .final-cta {
   position: relative;

@@ -26,6 +26,7 @@
       <a href="#voice">お客様の声</a>
       <a href="#qa">Q&amp;A</a>
       <a href="#access">アクセス</a>
+      <a href="#inquiry">お問い合わせ</a>
     </nav>
     <a href="#contact" class="btn btn-line btn-header">
       <span class="ico-line">&#9679;</span> LINEで相談する
@@ -285,6 +286,40 @@
   </div>
 </section>
 
+<!-- ===== INQUIRY FORM =====
+     FormSubmit（https://formsubmit.co/）を使用。アカウント登録不要ですが、
+     このフォームからの初回送信時に info@utsusu.jp 宛に確認メールが届くので、
+     本文中のリンクをクリックして送信先を有効化してください（以降は自動でメール転送されます）。
+-->
+<section class="section inquiry" id="inquiry">
+  <h3 class="section-label"><span>お問い合わせ</span></h3>
+  <p class="inquiry-lead">LINEでのご相談が難しい方は、こちらのフォームからもお問い合わせいただけます。</p>
+  <form class="inquiry-form" action="https://formsubmit.co/info@utsusu.jp" method="POST">
+    <input type="hidden" name="_subject" value="【入籍フォトLP】お問い合わせ">
+    <input type="hidden" name="_template" value="table">
+    <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off">
+    <div class="inquiry-row">
+      <label for="inquiry-name">お名前<span class="req">必須</span></label>
+      <input type="text" id="inquiry-name" name="お名前" required>
+    </div>
+    <div class="inquiry-row">
+      <label for="inquiry-email">メールアドレス<span class="req">必須</span></label>
+      <input type="email" id="inquiry-email" name="メールアドレス" required>
+    </div>
+    <div class="inquiry-row">
+      <label for="inquiry-tel">電話番号</label>
+      <input type="tel" id="inquiry-tel" name="電話番号">
+    </div>
+    <div class="inquiry-row">
+      <label for="inquiry-message">お問い合わせ内容<span class="req">必須</span></label>
+      <textarea id="inquiry-message" name="お問い合わせ内容" rows="5" required></textarea>
+    </div>
+    <button type="submit" class="btn btn-line">
+      <span class="ico-line">&#9679;</span> 送信する
+    </button>
+  </form>
+</section>
+
 <!-- ===== FINAL CTA ===== -->
 <section class="section final-cta" id="contact">
   <div class="ph ph-final" role="img" aria-label="プレースホルダー：スタジオでの新郎新婦の記念写真"></div>
@@ -312,6 +347,7 @@
       <a href="#voice">お客様の声</a>
       <a href="#qa">Q&amp;A</a>
       <a href="#access">アクセス</a>
+      <a href="#inquiry">お問い合わせ</a>
     </nav>
     <div class="footer-social">
       <a href="https://www.instagram.com/nice_life_photograph/" target="_blank" rel="noopener" aria-label="Instagram">IG</a>
