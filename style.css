@@ -107,7 +107,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 }
 .nav a:hover::after { transform: scaleX(1); transform-origin: left; }
 
-.hamburger { display: none; flex-direction: column; gap: 5px; width: 26px; padding: 4px; }
+.hamburger { position: relative; z-index: 101; display: none; flex-direction: column; gap: 5px; width: 26px; padding: 4px; }
 .hamburger span { display: block; height: 2px; background: #fff; transition: background 0.3s ease; }
 .site-header.scrolled .hamburger span { background: var(--color-ink); }
 
