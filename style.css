@@ -176,9 +176,11 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   margin-bottom: 18px;
 }
 .hero h1 {
-  font-size: clamp(28px, 4.6vw, 52px);
-  line-height: 1.5;
+  font-size: clamp(20px, 2.6vw, 28px);
+  line-height: 1.6;
   text-shadow: 0 2px 20px rgba(0,0,0,0.25);
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
 }
 .hero-sub {
   margin-top: 22px;
