@@ -180,7 +180,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   margin-bottom: 16px;
 }
 .hero h1 {
-  font-size: clamp(32px, 5.4vh, 56px);
+  font-size: clamp(22px, 3.6vh, 36px);
   line-height: 1.5;
   text-shadow: 0 2px 20px rgba(0,0,0,0.25);
   writing-mode: vertical-rl;
@@ -243,12 +243,12 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 @media (max-width: 720px) {
   .hero-content { padding: 100px 24px 64px; }
   .scroll-hint { display: none; }
-  .hero h1 { font-size: clamp(28px, 8vw, 40px); }
+  .hero h1 { font-size: clamp(20px, 5.5vw, 28px); }
 }
 @media (max-height: 700px) {
   .hero-content { padding-top: 90px; padding-bottom: 40px; }
   .hero-eyebrow { margin-bottom: 8px; }
-  .hero h1 { font-size: clamp(22px, 4.4vh, 36px); }
+  .hero h1 { font-size: clamp(18px, 3vh, 26px); }
   .hero-sub { margin-top: 10px; }
   .hero-price { margin-top: 14px; }
   .hero .btn-line { margin-top: 18px; }
