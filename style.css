@@ -133,9 +133,10 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   overflow: hidden;
   color: #fff;
 }
+.hero .ph-hero { position: absolute; inset: 0; height: auto; }
 .hero-overlay {
   position: absolute; inset: 0;
-  background: linear-gradient(180deg, rgba(20,18,12,0.2) 0%, rgba(20,18,12,0.1) 40%, rgba(20,18,12,0.6) 100%);
+  background: linear-gradient(180deg, rgba(20,18,12,0.35) 0%, rgba(20,18,12,0.3) 40%, rgba(20,18,12,0.75) 100%);
 }
 .hero-content {
   position: relative;
@@ -479,11 +480,16 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   z-index: 1;
 }
 
-.ph-hero   { background: linear-gradient(155deg, #f3c988 0%, #eb9f5e 22%, #d97848 42%, #8a7256 62%, #52664a 82%, #2c3a2c 100%); height: 100%; }
-.ph-studio { background: linear-gradient(150deg, #e6d8bd 0%, #cdb88f 45%, #8a7256 75%, #55432e 100%); }
+.ph-hero   { background-image: url("images/photo-hero.jpg"); background-size: cover; background-position: center; height: 100%; }
+.ph-studio { background-image: url("images/photo-concept.jpg"); background-size: cover; background-position: center; }
 .ph-final  { background: linear-gradient(160deg, #f0c07e 0%, #d97e52 35%, #6c5a4a 65%, #263a2c 100%); }
 
-.ph-g1  { background: linear-gradient(150deg,#f0c07e,#7a4a4a); }
+/* 実写差し替え済み：プレースホルダーの点柄と「REPLACE IMAGE」表示を消す */
+.ph-hero::before, .ph-hero::after,
+.ph-studio::before, .ph-studio::after,
+.ph-g1::before, .ph-g1::after { content: none; }
+
+.ph-g1  { background-image: url("images/photo-gallery-1.jpg"); background-size: cover; background-position: center; }
 .ph-g2  { background: linear-gradient(150deg,#d8c9a3,#6e5a3c); }
 .ph-g3  { background: linear-gradient(150deg,#e6bd7e,#384a34); }
 .ph-g4  { background: linear-gradient(150deg,#a98f63,#6e5a3c); }
