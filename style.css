@@ -613,12 +613,13 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 }
 
 .ph-studio { background-image: url("images/photo-concept.jpg"); background-size: cover; background-position: center; }
-.ph-final  { background: linear-gradient(160deg, #f0c07e 0%, #d97e52 35%, #6c5a4a 65%, #263a2c 100%); }
+.ph-final  { background-image: url("images/photo-final-cta.jpg"); background-size: cover; background-position: center; }
 .plan-photo-img { background-image: url("images/photo-plan-break.jpg"); background-size: cover; background-position: center; }
 .access-photo-img { background-image: url("images/photo-studio-exterior.jpg"); background-size: cover; background-position: center; }
 
 /* 実写差し替え済み：プレースホルダーの点柄と「REPLACE IMAGE」表示を消す */
 .ph-studio::before, .ph-studio::after,
+.ph-final::before, .ph-final::after,
 .plan-photo-img::before, .plan-photo-img::after,
 .access-photo-img::before, .access-photo-img::after,
 .ph-g1::before, .ph-g1::after { content: none; }
