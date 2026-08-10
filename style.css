@@ -133,7 +133,29 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   overflow: hidden;
   color: #fff;
 }
-.hero .ph-hero { position: absolute; inset: 0; height: auto; }
+.hero-slides { position: absolute; inset: 0; }
+.hero-slide {
+  position: absolute; inset: 0;
+  background-size: cover;
+  background-position: center;
+  opacity: 0;
+  transition: opacity 1.4s ease;
+}
+.hero-slide.active {
+  opacity: 1;
+  animation: heroKenBurns 5.5s ease-out forwards;
+}
+.hero-slide-1 { background-image: url("images/photo-hero-1.jpg"); }
+.hero-slide-2 { background-image: url("images/photo-hero-2.jpg"); }
+.hero-slide-3 { background-image: url("images/photo-hero-3.jpg"); }
+.hero-slide-4 { background-image: url("images/photo-hero-4.jpg"); }
+@keyframes heroKenBurns {
+  from { transform: scale(1); }
+  to { transform: scale(1.08); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .hero-slide.active { animation: none; }
+}
 .hero-overlay {
   position: absolute; inset: 0;
   background: linear-gradient(180deg, rgba(20,18,12,0.35) 0%, rgba(20,18,12,0.3) 40%, rgba(20,18,12,0.75) 100%);
@@ -480,12 +502,10 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   z-index: 1;
 }
 
-.ph-hero   { background-image: url("images/photo-hero.jpg"); background-size: cover; background-position: center; height: 100%; }
 .ph-studio { background-image: url("images/photo-concept.jpg"); background-size: cover; background-position: center; }
 .ph-final  { background: linear-gradient(160deg, #f0c07e 0%, #d97e52 35%, #6c5a4a 65%, #263a2c 100%); }
 
 /* 実写差し替え済み：プレースホルダーの点柄と「REPLACE IMAGE」表示を消す */
-.ph-hero::before, .ph-hero::after,
 .ph-studio::before, .ph-studio::after,
 .ph-g1::before, .ph-g1::after { content: none; }
 

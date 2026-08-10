@@ -16,3 +16,14 @@ hamburger.addEventListener('click', () => {
 nav.querySelectorAll('a').forEach((a) => {
   a.addEventListener('click', () => nav.classList.remove('open'));
 });
+
+// Hero slideshow (4 photos, crossfade + Ken Burns zoom on each change)
+const heroSlides = document.querySelectorAll('.hero-slide');
+if (heroSlides.length > 1) {
+  let heroIndex = 0;
+  setInterval(() => {
+    heroSlides[heroIndex].classList.remove('active');
+    heroIndex = (heroIndex + 1) % heroSlides.length;
+    heroSlides[heroIndex].classList.add('active');
+  }, 5000);
+}
