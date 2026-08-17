@@ -301,7 +301,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 }
 .intro-text h2 { font-size: clamp(24px, 2.6vw, 32px); line-height: 1.6; margin-bottom: 30px; }
 .intro-text p { color: var(--color-ink-soft); font-size: 15px; }
-.intro-image .ph { aspect-ratio: 4 / 5; border-radius: 4px; }
+.intro-image img { display: block; width: 100%; height: auto; aspect-ratio: 4 / 5; object-fit: cover; border-radius: 4px; }
 
 @media (max-width: 860px) {
   .intro-grid { grid-template-columns: 1fr; gap: 36px; }
@@ -413,8 +413,9 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 /* ---------- Gallery ---------- */
 .gallery { max-width: 1280px; margin: 0 auto; }
 .gallery-grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 10px; }
-.g-item { display: block; aspect-ratio: 1 / 1; border-radius: 3px; overflow: hidden; cursor: pointer; transition: transform 0.35s ease, filter 0.35s ease; }
-.g-item:hover { transform: scale(1.02); filter: brightness(1.05); }
+.g-item { display: block; aspect-ratio: 1 / 1; border-radius: 3px; overflow: hidden; cursor: pointer; }
+.g-item img { display: block; width: 100%; height: 100%; object-fit: cover; transition: transform 0.35s ease, filter 0.35s ease; }
+.g-item:hover img { transform: scale(1.06); filter: brightness(1.05); }
 .btn-insta {
   display: flex;
   width: fit-content;
@@ -474,7 +475,11 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 /* ---------- Access ---------- */
 .access { max-width: var(--max-width); margin: 0 auto; }
 .access-photo-img {
+  display: block;
+  width: 100%;
+  height: auto;
   aspect-ratio: 21 / 9;
+  object-fit: cover;
   border-radius: 4px;
   margin-bottom: 48px;
 }
@@ -613,37 +618,12 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   z-index: 1;
 }
 
-.ph-studio { background-image: url("images/photo-concept.jpg"); background-size: cover; background-position: center; }
 .ph-final  { background-image: url("images/photo-final-cta.jpg"); background-size: cover; background-position: center; }
 .plan-photo-img { background-image: url("images/photo-plan-break.jpg"); background-size: cover; background-position: center; }
-.access-photo-img { background-image: url("images/photo-studio-exterior.jpg"); background-size: cover; background-position: center; }
 
 /* 実写差し替え済み：プレースホルダーの点柄と「REPLACE IMAGE」表示を消す */
-.ph-studio::before, .ph-studio::after,
 .ph-final::before, .ph-final::after,
-.plan-photo-img::before, .plan-photo-img::after,
-.access-photo-img::before, .access-photo-img::after,
-.ph-g1::before, .ph-g1::after { content: none; }
-
-.ph-g1  { background-image: url("images/photo-gallery-1.jpg"); background-size: cover; background-position: center; }
-.ph-g2  { background-image: url("images/photo-gallery-2.jpg"); background-size: cover; background-position: center; }
-.ph-g3  { background-image: url("images/photo-gallery-3.jpg"); background-size: cover; background-position: center; }
-.ph-g4  { background-image: url("images/photo-gallery-4.jpg"); background-size: cover; background-position: center; }
-.ph-g5  { background-image: url("images/photo-gallery-5.jpg"); background-size: cover; background-position: center; }
-.ph-g6  { background-image: url("images/photo-gallery-6.jpg"); background-size: cover; background-position: center; }
-.ph-g7  { background-image: url("images/photo-gallery-7.jpg"); background-size: cover; background-position: center; }
-.ph-g8  { background-image: url("images/photo-gallery-8.jpg"); background-size: cover; background-position: center; }
-.ph-g9  { background-image: url("images/photo-gallery-9.jpg"); background-size: cover; background-position: center; }
-.ph-g10 { background: linear-gradient(150deg,#f3c988,#52664a); }
-
-.ph-g2::before, .ph-g2::after,
-.ph-g3::before, .ph-g3::after,
-.ph-g4::before, .ph-g4::after,
-.ph-g5::before, .ph-g5::after,
-.ph-g6::before, .ph-g6::after,
-.ph-g7::before, .ph-g7::after,
-.ph-g8::before, .ph-g8::after,
-.ph-g9::before, .ph-g9::after { content: none; }
+.plan-photo-img::before, .plan-photo-img::after { content: none; }
 
 .ph-voice1 { background: linear-gradient(150deg,#e6bd7e,#8a7256); }
 .ph-voice2 { background: linear-gradient(150deg,#cdb88f,#55432e); }
